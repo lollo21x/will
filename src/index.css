@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Completely remove all browser default outlines and focus styles */
+@layer base {
+  * {
+    @apply outline-none;
+  }
+  
+  *:focus {
+    @apply outline-none;
+  }
+  
+  *:focus-visible {
+    @apply outline-none;
+  }
+  
+  /* Remove default input styling */
+  input,
+  textarea,
+  button,
+  select {
+    @apply outline-none;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  
+  input:focus,
+  textarea:focus,
+  button:focus,
+  select:focus {
+    @apply outline-none;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  
+  input:focus-visible,
+  textarea:focus-visible,
+  button:focus-visible,
+  select:focus-visible {
+    @apply outline-none;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  
+  /* Remove any webkit focus rings */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+  
+  /* Remove focus rings from all elements */
+  button::-moz-focus-inner {
+    border: 0;
+  }
+  
+  /* Remove any default focus styles */
+  :focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  
+  :focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
